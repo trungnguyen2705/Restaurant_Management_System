@@ -1,0 +1,99 @@
+﻿:root {
+    --sidebar-width: 250px;
+}
+
+#side-bar {
+    /*position*/
+    position: fixed;
+    left: 0px;
+    /*layout*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /*design*/
+    width: var(--sidebar-width);
+    height: 100vh;
+}
+
+    #side-bar-brand-header {
+        background-color: #808080;
+        /*position*/
+        position: relative;
+
+        /*layout*/
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding:20px;
+        /*design*/
+        box-sizing: border-box;
+        height:80px;
+        width: 100%;
+    }
+
+        #side-bar-brand-header > img {
+            position: relative;
+            background-color: antiquewhite;
+            height: 30px;
+            width: 30px;
+        }
+
+        #side-bar-brand-header > div{
+            padding:0px;
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+            height: auto;
+        
+        }
+
+        #side-bar-brand-header > div >*{
+            margin:0px;
+            padding:0px;
+        }
+
+#side-bar > nav {
+    /*layout*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    padding-top: 0px;
+
+    /*design*/
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+    #side-bar > nav > button{
+        /*layout*/
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        padding-left: 20px;
+        /*design*/
+        height: 45px;
+        width: 100%;
+    }
+
+    #side-bar > nav > button>img {
+        /*design*/
+        height: 30px;
+        width: 30px;
+        background-color: gray;
+    }
+
+#main-content {
+    /*position*/
+    position: absolute;
+    left: var(--sidebar-width);
+    padding:20px;
+    /*design*/
+    background-color: red;
+    height: auto;
+    width: calc(100vw - var(--sidebar-width));
+}

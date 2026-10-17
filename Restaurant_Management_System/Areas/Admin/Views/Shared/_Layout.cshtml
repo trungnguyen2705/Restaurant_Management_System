@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/AdminLayout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Restaurant_Management_System.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <!-- side bar -->
+    <div id="side-bar" class="position-left justify-center bg-dark-blue">
+        <!--Brand Header-->
+        <div id="side-bar-brand-header">
+            <img src="#" class="img-no-repeat" />
+            <div>
+                <h5 class="font-bold text-white text-base" id="sidebarRestaurantName">Hương Việt Resto</h5>
+                <span class="text-orange">Hệ Thống Quản Lý F&B</span>
+            </div>
+        </div>
+
+        <!--nav Item -->
+        <nav>
+            <button class="nav-bar-button no-border border-radius-8 side-bar-button side-bar-button-choose-color">
+                <img src="#" class="nav-bar-button-icon img-no-repeat" />
+                <label class="nav-bar-button-content text-base text-white">Sơ Đồ Bàn</label>
+            </button>
+
+            
+            <button class="nav-bar-button no-border border-radius-8 side-bar-button side-bar-button-default-color">
+                <img src="#" class="nav-bar-button-icon img-no-repeat" />
+                <label class="nav-bar-button-content text-base text-white">Sơ Đồ Bàn</label>
+            </button>
+
+            <button class="nav-bar-button no-border border-radius-8 side-bar-button side-bar-button-default-color">
+                <img src="#" class="nav-bar-button-icon img-no-repeat" />
+                <label class="nav-bar-button-content text-base text-white">Sơ Đồ Bàn</label>
+            </button>
+        </nav>
+    </div>
+
+    <!-- header-->
+    <!--body-->
+    <div id="main-content">
+        @RenderBody()
+    </div>
+
+    <!--footer-->
+
+</body>
+</html>
