@@ -93,7 +93,6 @@
     left: var(--sidebar-width);
     padding:20px;
     /*design*/
-    background-color: red;
     height: auto;
     width: calc(100vw - var(--sidebar-width));
 }

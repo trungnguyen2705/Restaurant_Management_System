@@ -1,3 +1,9 @@
+using Restaurant_Management_System.Dal;
+
+DatabaseContext db = new DatabaseContext();
+db.Database.EnsureDeleted();
+db.Database.EnsureCreated();
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

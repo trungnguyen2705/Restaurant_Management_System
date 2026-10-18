@@ -1,0 +1,128 @@
+
+body {
+    background-color: blue;
+}
+
+#header{
+    /*position*/
+    position: relative;
+
+    /*layout*/
+    display: flex;
+    gap:10px;
+    padding:20px;
+     
+    /*design*/
+    margin-bottom:20px;
+    box-sizing: border-box;
+    width:100%;
+    height:80px;
+    background-color: white;
+}
+
+#area-layout-container> button{
+    /*design*/
+    padding:5px;
+    padding-left:12px;
+    padding-right:12px;
+}
+
+#table-layout {
+    /*position*/
+    /*layout*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /*design*/
+}
+
+.table-template {
+    /*position*/
+    position: relative;
+    /*lauout*/
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /*design*/
+    height: 120px;
+    width: 220px;
+}
+
+    .table-template > *{
+        margin:0px;
+        display:flex;
+        justify-content:flex-start;
+    }
+
+    .table-template > h5 {
+        display: flex;
+        gap:10px;
+        font-size: 14px;
+    }
+
+        .table-template > h5 > div {
+            /*position*/
+            margin-left: auto;
+            /*layout*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            /*design*/
+            border-radius:12px;
+            background-color: red;
+            color: white;
+            font-size:10px;
+        }
+
+    .table-template > .status-contain{
+        /*layout*/
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top:15px;
+    }
+
+.table-available {
+    /*design*/
+    background-color: rgb(29, 255, 0,0.08);
+    border: 2px solid rgb(29, 255, 0,0.2);
+}
+
+    .table-available > h5 > div {
+        background-color: rgb(29, 255, 0);
+    }
+
+    .table-available:hover {
+        background-color: rgb(0, 255, 144, 0.1);
+        border: 2px solid rgb(29, 255, 0,0.22);
+    }
+
+.table-occupied {
+    background-color: rgb(255, 0, 0, 0.08);
+    border: 2px solid rgb(255, 0, 0, 0.2);
+}
+    .table-occupied:hover {
+        background-color: rgb(255, 0, 0, 0.1);
+        border: 2px solid rgb(255, 0, 0, 0.22);
+    }
+
+    .table-occupied > h5 > div {
+        background-color: rgb(255, 0, 0);
+    }
+.table-dirty {
+    background-color: rgb(255, 125, 0, 0.08);
+    border: 2px solid rgb(255, 125, 0, 0.2);
+}
+
+    .table-dirty:hover {
+        background-color: rgb(255, 125, 0, 0.1);
+        border: 2px solid rgb(2255, 125, 0, 0.22);
+    }
+
+    .table-dirty > h5 > div {
+        background-color: rgb(255, 125, 0);
+    }
