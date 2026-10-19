@@ -3,7 +3,6 @@
     public class Order
     {
         public int Id { get; set; }
-        public int TableId { get; set; }
         public int TotalAmount { get; set; }
         public int DiscountAmount { get; set; }
         public int FinalAmount { get; set; }
