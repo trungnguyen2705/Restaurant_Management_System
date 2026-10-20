@@ -7,9 +7,10 @@ namespace Restaurant_Management_System.Models.Entities
         public int Id { get; set; }
         public String Name { get; set; }
         public int NumberOfSeats { get; set; }
-        public String Status { get; set; }
+        public int TableStatusId { get; set; }
         public int AreaId { get; set; }
 
         public Area Area { get; set; }
+        public TableStatus TableStatus { get; set; }
     }
 }

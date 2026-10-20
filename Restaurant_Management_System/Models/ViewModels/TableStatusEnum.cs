@@ -2,7 +2,7 @@
 
 namespace Restaurant_Management_System.Models.ViewModels
 {
-    public enum TableStatus
+    public enum TableStatusEnum
     {
         [Description("Available")]
         AVAILABLE,

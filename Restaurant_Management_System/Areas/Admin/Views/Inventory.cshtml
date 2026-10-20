@@ -1,0 +1,195 @@
+﻿@{
+    ViewData["Title"] = "Quản lý Thực đơn & Kho";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-container">
+    <!-- KHU VỰC 1: DANH SÁCH THỰC ĐƠN MÓN ĂN -->
+    <div class="card-box">
+        <div class="card-header">
+            <div class="header-title">
+                <h2>Danh Sách Thực Đơn Món Ăn</h2>
+                <p>Quản lý món ăn, cập nhật giá tiền và trạng thái hết hàng</p>
+            </div>
+            <button class="btn-add">
+                <i class="fa-solid fa-plus"></i> Thêm Món Ăn
+            </button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>MÓN ĂN</th>
+                        <th>DANH MỤC</th>
+                        <th>ĐƠN GIÁ</th>
+                        <th>TRẠNG THÁI KHO</th>
+                        <th class="text-end">THAO TÁC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dòng 1 -->
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/40" alt="Lẩu Thái" class="product-img" />
+                                <span class="product-name">Lẩu Thái Hải Sản VIP</span>
+                            </div>
+                        </td>
+                        <td>Lẩu</td>
+                        <td class="fw-bold">380.000 đ</td>
+                        <td><span class="badge badge-success">Còn Hàng</span></td>
+                        <td class="text-end">
+                            <button class="btn-action"><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+                    <!-- Dòng 2 -->
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/40" alt="Bò Lúc Lắc" class="product-img" />
+                                <span class="product-name">Bò Lúc Lắc Chảo Nóng</span>
+                            </div>
+                        </td>
+                        <td>Món chính</td>
+                        <td class="fw-bold">185.000 đ</td>
+                        <td><span class="badge badge-success">Còn Hàng</span></td>
+                        <td class="text-end">
+                            <button class="btn-action"><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+                    <!-- Dòng 3 -->
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/40" alt="Gỏi Củ Hủ Dừa" class="product-img" />
+                                <span class="product-name">Gỏi Củ Hủ Dừa Tôm Thịt</span>
+                            </div>
+                        </td>
+                        <td>Món chính</td>
+                        <td class="fw-bold">125.000 đ</td>
+                        <td><span class="badge badge-success">Còn Hàng</span></td>
+                        <td class="text-end">
+                            <button class="btn-action"><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+                    <!-- Dòng 4 -->
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/40" alt="Chả Giò" class="product-img" />
+                                <span class="product-name">Chả Giò Hải Sản Cua</span>
+                            </div>
+                        </td>
+                        <td>Món chính</td>
+                        <td class="fw-bold">95.000 đ</td>
+                        <td><span class="badge badge-success">Còn Hàng</span></td>
+                        <td class="text-end">
+                            <button class="btn-action"><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+                    <!-- Dòng 5 -->
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/40" alt="Gà Nướng" class="product-img" />
+                                <span class="product-name">Gà Nướng Mật Ong</span>
+                            </div>
+                        </td>
+                        <td>Món chính</td>
+                        <td class="fw-bold">220.000 đ</td>
+                        <td><span class="badge badge-success">Còn Hàng</span></td>
+                        <td class="text-end">
+                            <button class="btn-action"><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+                    <!-- Dòng 6 -->
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/40" alt="Bia Heineken" class="product-img" />
+                                <span class="product-name">Bia Heineken (Lon)</span>
+                            </div>
+                        </td>
+                        <td>Đồ uống</td>
+                        <td class="fw-bold">25.000 đ</td>
+                        <td><span class="badge badge-success">Còn Hàng</span></td>
+                        <td class="text-end">
+                            <button class="btn-action"><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+                    <!-- Dòng 7 -->
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/40" alt="Trà Đào" class="product-img" />
+                                <span class="product-name">Trà Đào Cam Sả</span>
+                            </div>
+                        </td>
+                        <td>Đồ uống</td>
+                        <td class="fw-bold">45.000 đ</td>
+                        <td><span class="badge badge-success">Còn Hàng</span></td>
+                        <td class="text-end">
+                            <button class="btn-action"><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+                    <!-- Dòng 8 -->
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/40" alt="Chè Hạt Sen" class="product-img" />
+                                <span class="product-name">Chè Hạt Sen Long Nhãn</span>
+                            </div>
+                        </td>
+                        <td>Tráng miệng</td>
+                        <td class="fw-bold">35.000 đ</td>
+                        <td><span class="badge badge-danger">Hết Hàng</span></td>
+                        <td class="text-end">
+                            <button class="btn-action"><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- KHU VỰC 2: CẢNH BÁO TỒN KHO NGUYÊN LIỆU -->
+    <div class="card-box mt-4">
+        <div class="card-header">
+            <div class="header-title">
+                <h2>Cảnh Báo Tồn Kho Nguyên Liệu</h2>
+                <p>Nguyên liệu sắp hết cần nhập bổ sung</p>
+            </div>
+            <span class="badge badge-warning-light">2 Nguyên Liệu Yêu Cầu</span>
+        </div>
+
+        <div class="inventory-grid">
+            <!-- Item 1: Cảnh báo đỏ -->
+            <div class="inventory-card alert-card">
+                <div class="inv-info">
+                    <strong>Thịt Bò Mỹ (Kg)</strong>
+                    <span class="text-danger-sm">Còn 2.5 kg (Cảnh báo < 5kg)</span>
+                </div>
+                <button class="btn-import">Nhập</button>
+            </div>
+
+            <!-- Item 2: Bình thường -->
+            <div class="inventory-card">
+                <div class="inv-info">
+                    <strong>Bia Heineken (Két)</strong>
+                    <span class="text-muted-sm">Còn 4 két</span>
+                </div>
+                <button class="btn-import">Nhập</button>
+            </div>
+
+            <!-- Item 3: An toàn -->
+            <div class="inventory-card">
+                <div class="inv-info">
+                    <strong>Nước Mắm Phú Quốc (Chai)</strong>
+                    <span class="text-success-sm"><i class="fa-solid fa-check"></i> An toàn</span>
+                </div>
+                <span class="text-muted-sm">Còn 18 chai</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
-﻿@page
-@model Restaurant_Management_System.Areas.Admin.Views.TableModel
+﻿@model Restaurant_Management_System.Models.ViewModels.TablePageView
+
 @{
 	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
@@ -12,6 +12,13 @@
 	<title>Document</title>
 </head>
 <body>
+	@using System.Text.Json
+
+	<div id="app-data"
+		 data-model='@Html.Raw(JsonSerializer.Serialize(Model))'>
+	</div>
+
+	<!--header-->
 	<div id="header">
 		<div id="area-layout-container">
 			<button id="area-button-template" class=" border-radius-8 header-button-choose-color">
@@ -29,10 +36,59 @@
 		<div statu></div>
 	</div>
 
+	<!--add new table button-->
+    <button type="button" id="create-new-table-button" class="text-white border-radius-8 btn-orange" onclick="window.location.href='@Url.Action("Create", "Table")'">
+        <i class="fa-solid fa-plus"></i>
+        <span>Thêm bàn mới</span>
+    </button>
+
+	<!--table detail-->
+	<div id="table-detail-container" style="display: none;">
+		<!--header-->
+		<div id="table-detail-header">
+			<h3 id="table-detail-name">Thông tin bàn T1-04</h3>
+			<label id="table-detail-area">khu vực; tầng 1</label>
+		</div>
+
+		<!--body-->
+		<div id="table-detail-body">
+			<div class="table-detail-content">
+				<label class="title">Status</label>
+				<h4 id="table-detail-status">Trống</h4>
+			</div>
+			<div class="table-detail-content">
+				<label class="title">Seats</label>
+				<h4 id="table-detail-numOfSeat">4 Ghế</h4>
+			</div>
+			<div class="table-detail-content">
+				<label class="title">start time</label>
+				<h4 id="table-detail-start-time">60 phút</h4>
+			</div>
+		</div>
+
+		<!--Dish List-->
+		<div class= "dish-container">
+			<div class="dish-item">
+				<h5>Gà nướng mật ong</h5>
+				<label>x1</label>
+			</div>
+		</div>
+
+		<!--footer-->
+		<div class="footer">
+			<button id= "add-dish-button">Thên Món</button>
+			<button id= "pay-button">Thanh Toán</button>
+			<button id= "update-table-button">Chỉnh Sửa</button>
+			<button id= "clean-button">Dọn/Trả bàn</button>
+		</div>
+	</div>
+
+
+	<!--table container-->
 	<div id="table-layout">
-		<button class="table-template border-radius-8 table-available">
+		<button class="table-template border-radius-8" style="display:none;">
 			<h5>
-				table T1-01
+				<span class="table-name">table T1-01</span>
 				<div class="border-radius-8 status-tag">Available</div>
 			</h5>
 			<label class="numer-seat">4 seats</label>
@@ -41,69 +97,9 @@
 				<div class="total-amount">100K</div>
 			</div>
 		</button>
-
-		<button class="table-template border-radius-8 table-occupied">
-			<h5>
-				table T1-01
-				<div class="border-radius-8 status-tag">Available</div>
-			</h5>
-			 <label class="numer-seat">4 seats</label>
-			 <div class="status-contain">
-				 <div class="status-content">đang phục vụ</div>
-				 <div class="total-amount">100K</div>
-			 </div>
-		</button>
-
-		<button class="table-template border-radius-8 table-dirty">
-			<h5>
-				table T1-01
-				<div class="border-radius-8 status-tag">Available</div>
-			</h5>
-			 <label class="numer-seat">4 seats</label>
-			 <div class="status-contain">
-				 <div class="status-content">đang phục vụ</div>
-				 <div class="total-amount">100K</div>
-			 </div>
-		</button>
-
-		<button class="table-template border-radius-8 table-available">
-			<h5>
-				table T1-01
-				<div class="border-radius-8 status-tag">Available</div>
-			</h5>
-			<label class="numer-seat">4 seats</label>
-			<div class="status-contain">
-				<div class="status-content">đang phục vụ</div>
-				<div class="total-amount">100K</div>
-			</div>
-		</button>
-
-		<button class="table-template border-radius-8 table-available">
-			<h5>
-				table T1-01
-				<div class="border-radius-8 status-tag">Available</div>
-			</h5>
-			<label class="numer-seat">4 seats</label>
-			<div class="status-contain">
-				<div class="status-content">đang phục vụ</div>
-				<div class="total-amount">100K</div>
-			</div>
-		</button>
-
-		<button class="table-template border-radius-8 table-available">
-			<h5>
-				table T1-01
-				<div class="border-radius-8 status-tag">Available</div>
-			</h5>
-			<label class="numer-seat">4 seats</label>
-			<div class="status-contain">
-				<div class="status-content">đang phục vụ</div>
-				<div class="total-amount">100K</div>
-			</div>
-		</button>
-
-
 
 	</div>
 </body>
 </html>
+
+<script src="~/js/TableLayout.js" asp-append-version="true"></script>

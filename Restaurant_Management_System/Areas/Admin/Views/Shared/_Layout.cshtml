@@ -9,41 +9,74 @@
     <link rel="stylesheet" href="~/Restaurant_Management_System.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <!-- side bar -->
-    <div id="side-bar" class="position-left justify-center bg-dark-blue">
-        <!--Brand Header-->
-        <div id="side-bar-brand-header">
-            <img src="#" class="img-no-repeat" />
-            <div>
-                <h5 class="font-bold text-white text-base" id="sidebarRestaurantName">Hương Việt Resto</h5>
-                <span class="text-orange">Hệ Thống Quản Lý F&B</span>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div>
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div>
+                    <h6 class="mb-0 fw-bold text-white">Hương Việt Resto</h6>
+                    <small class="text-secondary" style="font-size: 11px;">Hệ Thống Quản Lý F&B</small>
+                </div>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="#"><i class="fa-solid fa-border-all"></i> Sơ đồ bàn</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-cash-register"></i> Bán hàng / POS</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-book-open"></i> Thực đơn & Kho</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-users"></i> Nhân viên & Ca</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-chart-pie"></i> Báo cáo doanh thu</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-sliders"></i> Cài đặt hệ thống</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="d-flex align-items-center gap-2">
+                <span class="dot bg-success mb-0" style="width: 8px; height: 8px;"></span>
+                <span style="font-size: 12px;" class="text-white">Đang mở cửa</span>
+            </div>
+            <button class="btn btn-sm btn-dark" style="font-size: 11px; background: #374151; border: none;">Thay đổi</button>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <div class="main-content">
+        <!-- TOP HEADER -->
+        <div class="top-header">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Tìm nhanh bàn, món, đơn hàng...">
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <div class="user-profile">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="user-avatar" alt="Avatar">
+                    <div style="line-height: 1.2;">
+                        <span class="fw-bold d-block" style="font-size: 14px;">Nguyễn Minh Anh</span>
+                        <span class="text-muted" style="font-size: 12px;">Quản lý cửa hàng</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!--nav Item -->
-        <nav>
-            <button class="nav-bar-button no-border border-radius-8 side-bar-button side-bar-button-choose-color">
-                <img src="#" class="nav-bar-button-icon img-no-repeat" />
-                <label class="nav-bar-button-content text-base text-white">Sơ Đồ Bàn</label>
-            </button>
-
-            
-            <button class="nav-bar-button no-border border-radius-8 side-bar-button side-bar-button-default-color">
-                <img src="#" class="nav-bar-button-icon img-no-repeat" />
-                <label class="nav-bar-button-content text-base text-white">Sơ Đồ Bàn</label>
-            </button>
-
-            <button class="nav-bar-button no-border border-radius-8 side-bar-button side-bar-button-default-color">
-                <img src="#" class="nav-bar-button-icon img-no-repeat" />
-                <label class="nav-bar-button-content text-base text-white">Sơ Đồ Bàn</label>
-            </button>
-        </nav>
-    </div>
-
-    <!-- header-->
-    <!--body-->
-    <div id="main-content">
-        @RenderBody()
+        <!-- CONTENT BODY -->
+        <div class="content-body">
+            @RenderBody()
+        </div>
     </div>
 
     <!--footer-->

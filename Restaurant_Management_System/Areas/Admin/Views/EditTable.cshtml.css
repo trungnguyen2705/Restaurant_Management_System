@@ -1,0 +1,114 @@
+/* CSS for EditTable view */
+#create-table-id {
+    background-color: transparent !important;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 8px;
+}
+/* Khung chứa form */
+#create-table-form {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 8px;
+}
+
+    /* Chia các hàng thành 2 cột bằng nhau */
+    #create-table-form .row {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    #create-table-form .col {
+        flex: 1;
+        display: flex;
+        gap: 10px;
+        flex-direction: column; /* Đưa nhãn lên trên, input xuống dưới */
+    }
+
+    /* Định dạng nhãn */
+    #create-table-form label {
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    /* Ép các ô input và select giãn full 100% chiều rộng của cột */
+    #create-table-form .form-control,
+    #create-table-form .form-select {
+        width: 100% !important;
+        border: 1px solid #d1d5db;
+        box-sizing: border-box;
+        border-radius: 6px;
+        padding: 10px 14px;
+        font-size: 14px;
+        transition: all 0.2s ease;
+        background-color: #f9fafb !important;
+    }
+
+        /* Hiệu ứng khi focus */
+        #create-table-form .form-control:focus,
+        #create-table-form .form-select:focus {
+            border-color: #f97316;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+            background-color: #ffffff !important;
+            outline: none;
+        }
+
+    /* Khu vực nút bấm */
+    #create-table-form .row-3 {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+        #create-table-form .row-3 .col {
+            flex: 1;
+        }
+
+    #update-table-button {
+        background-color: #00b1ff !important;
+        border-color: #00b1ff !important;
+    }
+
+        #update-table-button:hover {
+            background-color: #0d5cff !important;
+        }
+
+    /* Nút Create Table */
+    #create-table-form .btn-primary {
+        background-color: #f97316;
+        border-color: #f97316;
+        font-weight: 600;
+        padding: 10px 24px;
+        border-radius: 6px;
+        width: 100%;
+        transition: background-color 0.2s ease;
+    }
+
+        #create-table-form .btn-primary:hover {
+            background-color: #ea580c;
+        }
+
+    /* Nút Cancel */
+    #create-table-form .btn-secondary {
+        background-color: #f3f4f6;
+        border-color: #e5e7eb;
+        color: #4b5563;
+        font-weight: 600;
+        padding: 10px 24px;
+        border-radius: 6px;
+        width: 100%;
+        transition: background-color 0.2s ease;
+    }
+
+        #create-table-form .btn-secondary:hover {
+            background-color: #e5e7eb;
+            color: #1f2937;
+        }

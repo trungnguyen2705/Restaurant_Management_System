@@ -1,0 +1,74 @@
+﻿@model Restaurant_Management_System.Models.ViewModels.EditTablePageView
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!--header-->
+	<h3 id="create-table-id">Create Table</h3>
+
+	<!--form-->
+	<form id="create-table-form" class="border-radius-8" asp-controller="Table" asp-action="Create" method="post">
+		<div class="row-1 row">
+			<!--Name-->
+			<div class="col">
+				<label>Name</label>
+				<input type="text" id="name" name="name" class="form-control" value="@Model.TableView.Name" required/>
+			</div>
+			<!--Area-->
+			<div class="col">
+				<label for="area">Area</label>
+				<select class="form-select bg-light" name="areaId">
+					@foreach (var area in Model.Areas)
+						{
+							<option value="@area.Id" selected="@(Model.TableView.AreaId == area.Id)">@area.Name</option>
+						}
+				</select>
+			</div>
+		</div>
+
+		<!--Id-->
+		<input type="hidden" name="Id" value="@Model.TableView.Id" />
+
+		<!-- number of seat and status -->
+		<div class="row-2 row">
+			<!--number of seat-->
+			<div class="col">
+				<label>Number Of Seat</label>
+				<input type="number" name="numOfSeat" class="form-control" value="@Model.TableView.NumberOfSeats" min="1" max="16" />
+			</div>
+			<!--status-->
+			<div class="col">
+				<label for="area">status</label>
+				<select class="form-select bg-light" name="statusId">
+					@foreach (var status in Model.TableStatuses)
+						{
+							<option value="@status.Id" selected="@(status.Id == Model.TableView.StatusId)">@status.Name</option>
+						}
+				</select>
+			</div>
+		</div>
+
+		<!--submit button and cancel button-->
+		<div class="row-3 row">
+			<div class="col">
+				<button type="submit" id="delete-table" class="btn btn-primary" onclick="this.form.action='/Table/Delete'">Delete Table</button>
+			</div>
+			<div class="col">
+				<button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Action("Index", "TableControler")'">Cancel</button>
+			</div>
+		</div>
+
+		<div class="row-3 row">
+			<button type="submit" id="update-table-button" class="btn btn-primary">Update Table</button>
+		</div>
+	</form>
+</body>
+</html>

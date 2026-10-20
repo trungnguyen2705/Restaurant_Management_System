@@ -1,8 +1,7 @@
-using Restaurant_Management_System.Dal;
+//using Restaurant_Management_System.Dal;
 
-DatabaseContext db = new DatabaseContext();
-db.Database.EnsureDeleted();
-db.Database.EnsureCreated();
+//new DatabaseContext().Database.EnsureDeleted();
+//new DatabaseContext().Database.EnsureCreated();
 
 var builder = WebApplication.CreateBuilder(args);
 

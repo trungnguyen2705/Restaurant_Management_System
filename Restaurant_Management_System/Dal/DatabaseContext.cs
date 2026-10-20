@@ -6,20 +6,21 @@ namespace Restaurant_Management_System.Dal
     public class DatabaseContext: DbContext
     {
         //DbSet
-        DbSet<Dish> Dish { get; set; }
-        DbSet<Category> Category { get; set; }
-        DbSet<Ingredient> Ingredient { get; set; }
-        DbSet<Supplier> Supplier { get; set; }
-        DbSet<DishIngredient> DishIngredient { get; set; }
-        DbSet<Area> Area { get; set; }
-        DbSet<Table> Table { get; set; }
-        DbSet<Role> Role { get; set; }
-        DbSet<Account> Account { get; set; }
-        DbSet<Customer> Customer { get; set; }
-        DbSet<Staff> Staff { get; set; }
-        DbSet<Order> Order { get; set; }
-        DbSet<OrderDetail> OrderDetail { get; set; }
-        DbSet<Promotion> Promotion { get; set; }
+        public DbSet<Dish> Dish { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Ingredient> Ingredient { get; set; }
+        public DbSet<Supplier> Supplier { get; set; }
+        public DbSet<DishIngredient> DishIngredient { get; set; }
+        public DbSet<Area> Area { get; set; }
+        public DbSet<Table> Table { get; set; }
+        public DbSet<Role> Role { get; set; }
+        public DbSet<Account> Account { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<Staff> Staff { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrderDetail> OrderDetail { get; set; }
+        public DbSet<Promotion> Promotion { get; set; }
+        public DbSet<TableStatus> TableStatus { get; set; }
 
         //Connection String
         private const string ConnectionString = "Data Source=localhost,1433;Initial Catalog=Restaurant_Management_System;User Id=sa;Password=123;TrustServerCertificate=True;";

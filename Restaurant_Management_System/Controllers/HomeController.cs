@@ -8,7 +8,9 @@ namespace Restaurant_Management_System.Controllers
     {
         public IActionResult Index()
         {
-            return View("~/Areas/Admin/Views/TableLayout.cshtml");
+            return View("~/Areas/Admin/Views/Inventory.cshtml");
+            //return RedirectToAction("List", "Table");
+            //return View();
         }
 
         public IActionResult Privacy()

@@ -1,98 +1,236 @@
 ﻿:root {
-    --sidebar-width: 250px;
+    --sidebar-bg: #111827;
+    --sidebar-active: #f97316;
+    --main-bg: #f3f4f6;
 }
 
-#side-bar {
-    /*position*/
+body {
+    background-color: var(--main-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: var(--sidebar-bg);
     position: fixed;
-    left: 0px;
-    /*layout*/
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 15px;
+    color: #fff;
+    z-index: 1000;
+}
+
+.sidebar-brand {
+    display: flex;
     align-items: center;
-    gap: 20px;
-    /*design*/
-    width: var(--sidebar-width);
+    gap: 12px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-logo {
+    background-color: #f97316;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    flex-grow: 1;
+}
+
+    .sidebar-menu li a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 12px 15px;
+        color: #9ca3af;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        transition: all 0.2s ease;
+    }
+
+        .sidebar-menu li.active a,
+        .sidebar-menu li a:hover {
+            background-color: var(--sidebar-active);
+            color: white;
+        }
+
+.sidebar-footer {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Main Content Layout */
+.main-content {
+    margin-left: 260px;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
 }
 
-    #side-bar-brand-header {
-        background-color: #808080;
-        /*position*/
-        position: relative;
-
-        /*layout*/
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding:20px;
-        /*design*/
-        box-sizing: border-box;
-        height:80px;
-        width: 100%;
-    }
-
-        #side-bar-brand-header > img {
-            position: relative;
-            background-color: antiquewhite;
-            height: 30px;
-            width: 30px;
-        }
-
-        #side-bar-brand-header > div{
-            padding:0px;
-            display: flex;
-            flex-direction: column;
-            gap:5px;
-            height: auto;
-        
-        }
-
-        #side-bar-brand-header > div >*{
-            margin:0px;
-            padding:0px;
-        }
-
-#side-bar > nav {
-    /*layout*/
+/* Header */
+.top-header {
+    background: white;
+    height: 70px;
+    border-bottom: 1px solid #e5e7eb;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 5px;
-    padding: 20px;
-    padding-top: 0px;
-
-    /*design*/
-    background-color: transparent;
-    box-sizing: border-box;
-    width: 100%;
+    justify-content: space-between;
+    padding: 0 30px;
 }
 
-    #side-bar > nav > button{
-        /*layout*/
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 20px;
-        padding-left: 20px;
-        /*design*/
-        height: 45px;
+.search-box {
+    position: relative;
+    width: 350px;
+}
+
+    .search-box input {
+        background-color: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 8px 15px 8px 38px;
         width: 100%;
+        font-size: 14px;
     }
 
-    #side-bar > nav > button>img {
-        /*design*/
-        height: 30px;
-        width: 30px;
-        background-color: gray;
+    .search-box i {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #9ca3af;
     }
 
-#main-content {
-    /*position*/
-    position: absolute;
-    left: var(--sidebar-width);
-    padding:20px;
-    /*design*/
-    height: auto;
-    width: calc(100vw - var(--sidebar-width));
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Content Body */
+.content-body {
+    padding: 25px 30px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+/* Filters & Status Indicators */
+.filter-container {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.nav-pills .nav-link {
+    color: #4b5563;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin-right: 5px;
+}
+
+    .nav-pills .nav-link.active {
+        background-color: #111827;
+        color: white;
+    }
+
+.status-indicators {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Cards (Table Grid) */
+.table-card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 16px;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    transition: all 0.2s;
+}
+
+    .table-card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-color: #d1d5db;
+    }
+
+    .table-card.status-trong {
+        border-top: 4px solid #10b981;
+    }
+
+    .table-card.status-khach {
+        border-top: 4px solid #ef4444;
+    }
+
+    .table-card.status-don {
+        border-top: 4px solid #f59e0b;
+    }
+
+    .table-card.status-dat {
+        border-top: 4px solid #8b5cf6;
+    }
+
+.badge-trong {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.badge-khach {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.badge-don {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.badge-dat {
+    background-color: #ede9fe;
+    color: #5b21b6;
 }
